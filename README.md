@@ -4,5 +4,5 @@
 - `make flash`
 
 ## To run display module
-- Navigate to 'src/main-module'
+- Navigate to 'src/display-module'
 - `make flash`
