@@ -2,9 +2,6 @@
 #include <util/delay.h>
 #include <stdio.h>
 
-// #include "../../libs/Adafruit-GFX-Library/Adafruit_GFX.h"
-// #include "../../libs/Adafruit_LIS3DH/Adafruit_LIS3DH.h"
-
 #include "sensor-data.h"
 
 void loop (void);

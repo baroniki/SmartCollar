@@ -1,11 +1,11 @@
+#ifndef SENSOR_DATA_H
+#define SENSOR_DATA_H
+
 #include "accelerometer.h"
 #include "gps.h"
 #include "temp-sensor.h"
 #include "pulse-sensor.h"
 #include "float-level.h"
-
-#ifndef SENSOR_DATA_H
-#define SENSOR_DATA_H
 
 struct sensor_data {
     struct acc_data acc_data;
