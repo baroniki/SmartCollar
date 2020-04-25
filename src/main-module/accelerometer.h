@@ -28,6 +28,12 @@ struct acc_data {
     uint16_t z;
 };
 
+void init_acc() {
+    i2c_init(BDIV);
+
+    sci_init(MYUBRR);
+}
+
 struct acc_data read_acc() {
     struct acc_data acc_data;
     acc_data.x = 0;
@@ -36,9 +42,7 @@ struct acc_data read_acc() {
 
     uint8_t status;
 
-    i2c_init(BDIV);
-
-    sci_init(MYUBRR);
+    
 
     uint8_t buffer[6];
     status = rdprom(buffer, 6, LIS3DH_REG_OUT_X_L);
