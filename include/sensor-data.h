@@ -6,6 +6,8 @@
 #include "temp-sensor.h"
 #include "pulse-sensor.h"
 #include "float-level.h"
+#include "buzzer.h"
+#include "led.h"
 
 struct sensor_data {
     struct acc_data acc_data;
