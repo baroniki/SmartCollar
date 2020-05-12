@@ -8,9 +8,9 @@
 
 
 struct gps_data {
-    double latitude;
-    double longitude;
-    double latitude_min, latitude_max, longitude_min, longitude_max;
+    uint16_t latitude;
+    uint16_t longitude;
+    uint16_t latitude_min, latitude_max, longitude_min, longitude_max;
     char N;
     char E;
 };
@@ -56,13 +56,13 @@ struct gps_data read_line(char * line) {
 
         switch(num_commas) {
             case 2:
-                //gps_data.latitude = atof(str);
+                //gps_data.latitude = atoi(str);
                 break;
             case 3:
                 gps_data.N = strcmp(str, n) == 0 ? 1 : 0;
                 break;
             case 4:
-                //gps_data.longitude = atof(str);
+                //gps_data.longitude = atoi(str);
                 break;
             case 5:
                 gps_data.E = strcmp(str, e) == 0 ? 1 : 0;

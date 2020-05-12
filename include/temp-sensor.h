@@ -2,7 +2,7 @@
 #define TEMP_SENSOR_H
 
 struct temp_data {
-    double temp; // temp in farenheight
+    unsigned char temp; // temp in farenheight
 };
 
 struct temp_data read_temp_sensor() {
@@ -13,7 +13,7 @@ struct temp_data read_temp_sensor() {
 
     while(ADCSRA & (1 << ADSC));
 
-    temp_data.temp = (ADCH * 9.0 / 5.0) + 32;
+    temp_data.temp = (ADCH * 9 / 5) + 32;
 
     return temp_data;
 }

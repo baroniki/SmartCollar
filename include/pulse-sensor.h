@@ -2,7 +2,7 @@
 #define PULSE_SENSOR_H
 
 struct pulse_data {
-    double pulse;
+    unsigned char pulse;
 };
 
 struct pulse_data read_pulse_sensor() {
